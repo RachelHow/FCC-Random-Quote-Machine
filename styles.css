@@ -33,11 +33,27 @@ h1{
     font-weight: 600;
     line-height: 1.3;
 }
-#quote-box{
-  border: 1px solid black;
-  width: 400px;
-  height: 300px;
-  padding: 8% 8%;
+#header{
+  padding-bottom: 55px;
+  padding-top: 55px;
+}
+.quote-wrap{
+    border: 1px solid rgb(221, 221, 221);
+    width: 400px;
+    height: 100%;
+    padding: 8% 8%;
+    border-radius: 15px;
+}
+.fa-twitter-square{
+    color: #1DA1F2;
+    float: left;
+    font-size: 32px;
+}
+.btn{
+    float: right;
+    padding: 15px;
+    border-radius: 5px;
+    border: 1px solid rgb(221, 221, 221);
 }
 footer {
     width: 100%;

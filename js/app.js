@@ -11,7 +11,7 @@ $(document).ready(function() {
         success: function(response) {
           quote = response.quoteText;
           author = response.quoteAuthor;
-          $('#quote').text(quote);
+          $('#text').text(quote);
           if (author) {
             $('#author').text(author);
           } 
@@ -26,6 +26,14 @@ $(document).ready(function() {
   $('#new-quote').on('click', function(event){
     event.preventDefault();
     getNewQuote();
-  })
-  
+  });
+
+  $('#tweet-quote').on('click', function(event){
+    event.preventDefault();
+    window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent(quote + "\u2014 " + author));
+  });
+
 });
+
+
+$('#tweet-quote').attr('href', 'https://twitter.com/intent/tweet?hashtags=quotes&related=freecodecamp&text=' + encodeURIComponent('"' + currentQuote + '" ' + currentAuthor));

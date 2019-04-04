@@ -8,29 +8,30 @@
   <meta name="author" content="Rachel How">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 </head>
 
 <body>
 
-<div>
+<div id="header">
   <h1>Random Quotes</h1>
 </div>
 
 <div id="wrapper">
+
   <div id="quote-box">
       <div class="quote-box">
-        <p id="quote"></p>
-        - <p id="author"></p>
+        <div class="quote-wrap">
+            <p id="text"></p>
+            - <p id="author"></p>
+         </div>
+        <div style="padding-top: 55px;">
+            <button class="btn" id="new-quote">New quote</button>
+            <a class="button" id="tweet-quote" title="Tweet this quote!" target="_blank"><i class="fab fa-twitter-square"></i></a>
+        </div>
       </div>
     </div>
-  <div>
-    <div class="buttons">
-      <a class="button" id="tweet-quote" title="Tweet this quote!" target="_blank"><i class="fa fa-twitter"></i>
-      </a>
-      <br/><br/>
-      <button class="button" id="new-quote">New quote</button>
-    </div>
-  </div>
+
 </div>
 
 <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
