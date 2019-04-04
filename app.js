@@ -14,27 +14,27 @@ $(document).ready(function(){
       "A lie gets halfway around the world before the truth has a chance to get its pants on."
     ]
     var authors = [
-     "- H. G. Wells ",
-     "- Napoleon Bonaparte",
+     "H. G. Wells ",
+     "Napoleon Bonaparte",
      "Charlton Heston",
-     "- Albert Einstein",
-     "- Sir Winston Churchill"
+     "Albert Einstein",
+     "Sir Winston Churchill"
     ]
 
     randomNum = Math.floor((Math.random()*quotes.length));
     randomQuote = quotes[randomNum];
     randomAuthor = authors[randomNum];
 
-    $("#text").text(randomQuote);
+    $("#quote").text(randomQuote);
     $("#author").text(randomAuthor);
   }
 
-    $("#tweet-quote").on("click", function() {
+    $("#tweet").on("click", function() {
       window.open("https://twitter.com/intent/tweet?text="+randomQuote + " " + randomAuthor);
     });
 
-    $("#new-quote").on("click", function() {
+    $("#quoteme").on("click", function() {
       getQuote();
     });
 
-  });
+  }); 
