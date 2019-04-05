@@ -11,10 +11,10 @@ $(document).ready(function() {
           author = response.character;
           $('#text').text(quote);
           if (author) {
-            $('#author').text(author);
+            $('#author').text('- ' + author);
           } 
           else {
-            $('#author').text('unknown');
+            $('#author').text('- ' + 'unknown');
           }
         }
       });
