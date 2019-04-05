@@ -5,12 +5,10 @@ $(document).ready(function() {
 
   function getNewQuote() {
       $.ajax({
-        url: 'http://api.forismatic.com/api/1.0/?method=getQuote&format=jsonp&lang=en',
-        jsonp: 'jsonp',
-        dataType: 'jsonp',
+        url: 'https://got-quotes.herokuapp.com/quotes',
         success: function(response) {
-          quote = response.quoteText;
-          author = response.quoteAuthor;
+          quote = response.quote;
+          author = response.character;
           $('#text').text(quote);
           if (author) {
             $('#author').text(author);
